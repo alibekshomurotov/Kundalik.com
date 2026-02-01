@@ -1,0 +1,215 @@
+/* src/App.css */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asosiy tuzilma */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Button va input uchun MUHIM stillar */
+button, 
+.btn-modern, 
+.btn-modern-outline,
+input,
+select,
+textarea {
+  cursor: pointer;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+  position: relative;
+}
+
+button:disabled,
+.btn-modern:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Linklar */
+a {
+  color: #4361ee;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.125em;
+  border: 0.2em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+.spinner-border-sm {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-width: 0.15em;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Table styles */
+.table-modern {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-modern th,
+.table-modern td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table-modern th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Grid system */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col {
+  padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px 0;
+  }
+  
+  .table-modern th,
+  .table-modern td {
+    padding: 8px;
+  }
+}
+
+/* src/App.css ga qo'shimcha */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asosiy tuzilma */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Button va input uchun MUHIM stillar */
+button, 
+.btn-modern, 
+.btn-modern-outline,
+input,
+select,
+textarea,
+a {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+  position: relative;
+}
+
+button:disabled,
+.btn-modern:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+/* Input uchun alohida */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  cursor: text !important;
+}
+
+/* Login/Register sahifalari uchun */
+.login-page, .register-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* Animatsiyalar */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px 0;
+  }
+  
+  .btn-modern, .btn-modern-outline {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+  }
+}
